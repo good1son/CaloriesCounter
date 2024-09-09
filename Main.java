@@ -5,28 +5,28 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         printMenu();
         int userInput = scanner.nextInt();
-        StepTracker tracker = new StepTracker(); // !создастся обьект, хотя нажали выход
+        StepTracker tracker = new StepTracker(); // !СЃРѕР·РґР°СЃС‚СЃСЏ РѕР±СЊРµРєС‚, С…РѕС‚СЏ РЅР°Р¶Р°Р»Рё РІС‹С…РѕРґ
 
         while (isAppRun(userInput)) {
             switch (userInput) {
                 case 1: tracker.inputStepCount(); break;
                 case 2: tracker.showMonthStatistic(); break;
                 case 3: tracker.changeTargetInDay(); break;
-                default: System.out.println("Неверная команда. Повторите ввод.");
+                default: System.out.println("РќРµРІРµСЂРЅР°СЏ РєРѕРјР°РЅРґР°. РџРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ.");
             }
 
             printMenu();
             userInput = scanner.nextInt();
         }
 
-        System.out.println("Программа завершена");
+        System.out.println("РџСЂРѕРіСЂР°РјРјР° Р·Р°РІРµСЂС€РµРЅР°");
     }
 
     public static void printMenu(){
-        System.out.println("1. Ввести количество шагов за определенный день");
-        System.out.println("2. Напечатать статистику за определенный месяц");
-        System.out.println("3. Изменить цель по количеству шагов в день");
-        System.out.println("4. Выйти из приложения");
+        System.out.println("1. Р’РІРµСЃС‚Рё РєРѕР»РёС‡РµСЃС‚РІРѕ С€Р°РіРѕРІ Р·Р° РѕРїСЂРµРґРµР»РµРЅРЅС‹Р№ РґРµРЅСЊ");
+        System.out.println("2. РќР°РїРµС‡Р°С‚Р°С‚СЊ СЃС‚Р°С‚РёСЃС‚РёРєСѓ Р·Р° РѕРїСЂРµРґРµР»РµРЅРЅС‹Р№ РјРµСЃСЏС†");
+        System.out.println("3. РР·РјРµРЅРёС‚СЊ С†РµР»СЊ РїРѕ РєРѕР»РёС‡РµСЃС‚РІСѓ С€Р°РіРѕРІ РІ РґРµРЅСЊ");
+        System.out.println("4. Р’С‹Р№С‚Рё РёР· РїСЂРёР»РѕР¶РµРЅРёСЏ");
     }
 
     public static boolean isAppRun(int value) {
